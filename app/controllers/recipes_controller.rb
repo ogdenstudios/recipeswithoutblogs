@@ -30,12 +30,13 @@ class RecipesController < ApplicationController
     else
       render 'edit'
     end
+  end
 
     def destroy
       @recipe.destroy
       redirect_to root_path, notice: "Successfully deleted recipe"
     end
-  end
+
   private
 
   def find_recipe
