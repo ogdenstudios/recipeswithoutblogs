@@ -26,7 +26,11 @@ class RecipesController < ApplicationController
   end
 
   def update
+    image = params[:recipe][:image]
     if @recipe.update(recipe_params)
+      if image
+        @recipe.image.attach(image)
+      end
       redirect_to @recipe
     else
       render 'edit'
