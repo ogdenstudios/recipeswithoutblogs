@@ -59,10 +59,13 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
-gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 
 gem 'devise'
+
+gem 'activestorage', '~> 0.1'
+
+gem 'mini_magick', '~> 4.8'
