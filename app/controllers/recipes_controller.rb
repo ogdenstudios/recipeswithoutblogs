@@ -14,7 +14,8 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = current_user.recipes.build(recipe_params)
-
+    # image = params[:recipe][:image]
+    # @recipe.image.attach(image)
     if @recipe.save
       redirect_to @recipe, notice: "Successfully created new recipe"
     else
@@ -49,7 +50,7 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:title, :description, :image, ingredientes_attributes: [:id, :name, :_destroy],
+    params.require(:recipe).permit(:title, :description, ingredientes_attributes: [:id, :name, :_destroy],
     directions_attributes: [:id, :step, :_destroy])
   end
 end
