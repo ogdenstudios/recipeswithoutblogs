@@ -33,6 +33,24 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'haml', '5.0.0.beta.2'
+
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
+
+gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
+
+gem 'devise'
+
+gem 'activestorage', '~> 0.1'
+
+gem 'carrierwave',             '1.2.2'
+
+gem 'mini_magick', '~> 4.8'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -50,22 +68,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+  gem 'pg',  '0.20.0'
+  gem 'fog', '1.42'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'haml', '5.0.0.beta.2'
-
-gem 'simple_form', '~> 3.2', '>= 3.2.1'
-
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-
-
-gem 'cocoon', '~> 1.2', '>= 1.2.9'
-
-gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
-
-gem 'devise'
-
-gem 'activestorage', '~> 0.1'
-
-gem 'mini_magick', '~> 4.8'
