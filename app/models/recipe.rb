@@ -12,7 +12,7 @@ class Recipe < ApplicationRecord
     															reject_if: proc { |attributes| attributes['step'].blank? },
     															allow_destroy: true
 
-    validates :title, :description, presence: true
+    validates :title, :description, :picture, presence: true
 
     private
 

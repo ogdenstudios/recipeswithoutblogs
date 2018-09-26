@@ -13,8 +13,8 @@ class RecipesController < ApplicationController
   end
 
   def create
-    recipe = current_user.recipes.create!(params.require(:recipe).permit(:title, :description, :picture, ingredients_attributes: [:id, :name, :_destroy], directions_attributes: [:id, :step, :_destroy]))
-    if recipe.save
+    @recipe = current_user.recipes.build(recipe_params)
+    if @recipe.save
       redirect_to recipe, notice: "Successfully created new recipe"
     else
       render "new"
