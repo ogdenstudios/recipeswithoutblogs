@@ -41,7 +41,7 @@ gem 'bootstrap', '~> 4.1.3'
 
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
-gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
+gem 'jquery-rails'
 
 gem 'devise'
 

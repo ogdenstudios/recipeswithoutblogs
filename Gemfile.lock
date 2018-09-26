@@ -419,7 +419,7 @@ DEPENDENCIES
   fog (= 1.42)
   haml (= 5.0.0.beta.2)
   jbuilder (~> 2.5)
-  jquery-rails (~> 4.1, >= 4.1.1)
+  jquery-rails
   listen (>= 3.0.5, < 3.2)
   mini_magick (~> 4.8)
   pg (= 0.20.0)
