@@ -1,0 +1,50 @@
+<div class="main_content">
+  <div id="recipe_top" class="row">
+    <div class="col">
+      <%= image_tag @recipe.picture.url if @recipe.picture?%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div id="recipe-info">
+        <h1><%= @recipe.title %></h1>
+        <p class="description"><%= @recipe.description %></p>
+        <p>Submitted by
+          <%= @recipe.user.email %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="ingredients">
+          <h2>Ingredients</h2>
+          <ul>
+            <% @recipe.ingredients.each do |ingredient| %>
+              <li><%= ingredient.name %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="directions">
+          <h2>Directions</h2>
+          <ul>
+            <% @recipe.directions.each do |direction| %>
+              <li><%= direction.step %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <%= link_to "Back", root_path, class:"btn btn-default" %>
+        <% if user_signed_in? %>
+          <%= link_to "Edit", edit_recipe_path, class:"btn btn-default" %>
+          <%= link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
