@@ -2,5 +2,7 @@
   .row
     - recipes.each do |recipe|
       .col-md-4
-        .recipe
-          %h2= link_to recipe.title, recipe
+        .card
+          %img{:class => 'card-img-top', :src => recipe.picture.url}
+            .card-body
+              %h2= link_to recipe.title, recipe
