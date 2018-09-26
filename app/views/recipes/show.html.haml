@@ -1,8 +1,9 @@
 .main_content
   #recipe_top.row
-    .col-md-4
+    .col
       = image_tag @recipe.picture.url if @recipe.picture?
-    .col-md-8
+  .row
+    .col
       #recipe_info
         %h1= @recipe.title
         %p.description= @recipe.description
@@ -10,20 +11,21 @@
           Submitted by
           = @recipe.user.email
   .row
-    .col-md-6
+    .col
       #ingredients
         %h2 Ingredients
         %ul
           - @recipe.ingredients.each do |ingredient|
             %li= ingredient.name
-    .col-md-6
+  .row
+    .col
       #directions
         %h2 Directions
         %ul
           - @recipe.directions.each do |direction|
             %li= direction.step
   .row
-    .col-md-12
+    .col
       = link_to "Back", root_path, class:"btn btn-default"
       - if user_signed_in?
         = link_to "Edit", edit_recipe_path, class:"btn btn-default"
