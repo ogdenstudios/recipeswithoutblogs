@@ -13,6 +13,7 @@ class Recipe < ApplicationRecord
     															allow_destroy: true
 
     validates :title, :description, :picture, presence: true
+    validates :description, length: { maximum: 140 }
 
     private
 
