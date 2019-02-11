@@ -14,7 +14,7 @@ begin
     SecretUserSeeds.emails.each do |email| 
         User.create!(
             email: email,
-            password: ENV["RWB_USER_PASSWORD"]
+            password: SecretUserSeeds.password
         )
     end
 rescue LoadError
@@ -22,3 +22,10 @@ rescue LoadError
     puts "Or, create your own dummy file at db/data/users.rb, if you just need to develop"
     exit
 end
+
+Recipe.create!(
+    title: "Vegan Chocolate Cinnamon Babka",
+    description: "This recipe is based on one from Holy Cow Vegan, but I have simplified it a bit.",
+    user_id: 8,
+    picture: open(File.join(Rails.root, "app/assets/images/vegan-chocolate-cinnamon-babka.jpg"))
+)
