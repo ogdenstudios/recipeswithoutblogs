@@ -21,3 +21,6 @@
 /yarn-error.log
 
 .byebug_history
+
+# Keep seed emails secret
+db/data/users.rb
