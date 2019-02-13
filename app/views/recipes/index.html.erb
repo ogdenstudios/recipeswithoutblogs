@@ -1,10 +1,10 @@
 <%= @recipe.each_slice(3) do |recipes| %>
-<div class="row">
+<div>
   <% recipes.each do |recipe| %>
-    <div class="col-md-4">
-      <div class="card">
-        <img class="card-img-top" src=<%= recipe.picture.url %>/>
-        <div class="card-body">
+    <div>
+      <div>
+        <img src=<%= recipe.picture.url %>/>
+        <div>
           <h2><%= link_to recipe.title, recipe %></h2>
         </div>
       </div>

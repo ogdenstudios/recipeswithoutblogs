@@ -36,8 +36,6 @@ gem 'haml', '5.0.0.beta.2'
 
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
-gem 'bootstrap', '~> 4.1.3'
-
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
 gem 'jquery-rails'
@@ -46,7 +44,7 @@ gem 'devise'
 
 gem 'activestorage', '~> 0.1'
 
-gem 'carrierwave',             '1.2.2'
+gem 'carrierwave', '1.2.2'
 
 gem 'mini_magick', '~> 4.8'
 

@@ -8,39 +8,39 @@
 			</ul>
 		</div>
 	<% end %>
-	<div class="panel-body">
-		<%= f.input :title, input_html: { class: 'form-control' } %>
+	<div>
+		<%= f.input :title %>
 		    <label for="recipe[description]">* Description: 140 character limit</label>
-		<%= f.input :description, input_html: { class: 'form-control' }, label: false %>
+		<%= f.input :description, label: false %>
 		    <label for="recipe[picture]">Picture: as high resolution as possible. Will be cropped to 400x400</label>
 		<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-		<div class="row p-3">
-			<div class="col-md-6">
+		<div>
+			<div>
 				<h3>Ingredients</h3>
 				<p>Add ingredients: including quantities</p>
 				<div id="#ingredients">
 					<%= f.simple_fields_for :ingredients do |ingredient| %>
 					<%= render 'ingredient_fields', f: ingredient %>
 				<% end %>
-				<div class="links">
-					<%= link_to_add_association 'Add Ingredient', f, :ingredients, class: "btn btn-default add-button" %>
+				<div>
+					<%= link_to_add_association 'Add Ingredient', f, :ingredients %>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div>
 			<h3>Directions</h3>
 			<p>Add directions: step by step</p>
 			<div id="#directions">
 				<%= f.simple_fields_for :directions do |direction| %>
 				<%= render 'direction_fields', f: direction %>
 			<% end %>
-			<div class="links">
-				<%= link_to_add_association 'Add Step', f, :directions, class: "btn btn-default add-button" %>
+			<div>
+				<%= link_to_add_association 'Add Step', f, :directions %>
 			</div>
 		</div>
 	</div>
 </div>
-<%= f.button :submit, class: "btn btn-primary" %>
+<%= f.button :submit %>
 
 </div>
 <% end %>
