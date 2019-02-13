@@ -50,6 +50,8 @@ gem 'carrierwave',             '1.2.2'
 
 gem 'mini_magick', '~> 4.8'
 
+gem 'seed_migration' 
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

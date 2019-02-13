@@ -355,6 +355,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    seed_migration (1.2.3)
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
@@ -426,6 +427,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.6)
   sass-rails (~> 5.0)
+  seed_migration
   selenium-webdriver
   simple_form (~> 3.2, >= 3.2.1)
   spring
@@ -437,4 +439,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.2
+   1.17.3
