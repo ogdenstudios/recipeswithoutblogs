@@ -9,7 +9,7 @@ class AddFourthRecipe < SeedMigration::Migration
     )
 
     # Create ingredients 
-    recipe = Recipe.find_by(title: "Maple Brown Butter Pork Chops")
+    recipe = Recipe.find_by(title: "Beginner's Bread")
     [
       "2.25 teaspoons (1 packet) active dry yeast",
       "1 teaspoon sugar",

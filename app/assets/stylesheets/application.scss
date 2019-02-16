@@ -14,12 +14,26 @@
  *= require_self
  */
 
+$gray: #F6F6F6;
 body {
     margin: 0 auto;
     max-width: 600px;
     padding: 1rem;
 }
 
+footer {
+    margin: 1rem 0;
+}
+
 .page-content {
     padding: 1rem;
+}
+
+.recipe {
+    &__card {
+        background: $gray;
+        box-sizing: content-box;
+        margin: 1rem;
+        padding: 1rem;
+    }
 }

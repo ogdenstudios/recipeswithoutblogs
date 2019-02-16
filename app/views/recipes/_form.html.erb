@@ -1,30 +1,30 @@
 <%= simple_form_for @recipe, { multipart: true} do |f| %>
-<% if @recipe.errors.any? %>
-	<div id="errors">
-		<ul>
+
+	<% if @recipe.errors.any? %>
+		<div id="errors">
+			<ul>
 			<% @recipe.errors.full_messages.each do |msg| %>
 				<li><%= msg %></li>
-				<% end %>
+			<% end %>
 			</ul>
 		</div>
 	<% end %>
+
 	<div>
 		<%= f.input :title %>
-		    <label for="recipe[description]">* Description: 140 character limit</label>
+		<label for="recipe[description]">* Description: 140 character limit</label>
 		<%= f.input :description, label: false %>
-		    <label for="recipe[picture]">Picture: as high resolution as possible. Will be cropped to 400x400</label>
+		<label for="recipe[picture]">Picture: as high resolution as possible. Will be cropped to 400x400</label>
 		<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
 		<div>
-			<div>
-				<h3>Ingredients</h3>
-				<p>Add ingredients: including quantities</p>
-				<div id="#ingredients">
-					<%= f.simple_fields_for :ingredients do |ingredient| %>
+			<h3>Ingredients</h3>
+			<p>Add ingredients: including quantities</p>
+			<div id="#ingredients">
+				<%= f.simple_fields_for :ingredients do |ingredient| %>
 					<%= render 'ingredient_fields', f: ingredient %>
 				<% end %>
-				<div>
-					<%= link_to_add_association 'Add Ingredient', f, :ingredients %>
-				</div>
+			<div>
+				<%= link_to_add_association 'Add Ingredient', f, :ingredients %>
 			</div>
 		</div>
 		<div>
@@ -32,15 +32,12 @@
 			<p>Add directions: step by step</p>
 			<div id="#directions">
 				<%= f.simple_fields_for :directions do |direction| %>
-				<%= render 'direction_fields', f: direction %>
-			<% end %>
+					<%= render 'direction_fields', f: direction %>
+				<% end %>
 			<div>
 				<%= link_to_add_association 'Add Step', f, :directions %>
 			</div>
 		</div>
 	</div>
-</div>
 <%= f.button :submit %>
-
-</div>
 <% end %>

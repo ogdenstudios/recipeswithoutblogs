@@ -1,7 +1,7 @@
 class Recipe < ApplicationRecord
     belongs_to :user
-  	has_many :ingredients
-  	has_many :directions
+  	has_many :ingredients, dependent: :destroy
+  	has_many :directions, dependent: :destroy
     mount_uploader :picture, PictureUploader
     validate  :picture_size
 

@@ -9,9 +9,6 @@
       <div id="recipe-info">
         <h1><%= @recipe.title %></h1>
         <p><%= @recipe.description %></p>
-        <p>Submitted by
-          <%= @recipe.user.email %>
-        </div>
       </div>
     </div>
     <div>
@@ -40,8 +37,7 @@
     </div>
     <div>
       <div>
-        <%= link_to "Back", root_path%>
-        <% if user_signed_in? %>
+        <% if user_signed_in? && @current_user.id == @recipe.user_id %>
           <%= link_to "Edit", edit_recipe_path %>
           <%= link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure?"} %>
           <% end %>

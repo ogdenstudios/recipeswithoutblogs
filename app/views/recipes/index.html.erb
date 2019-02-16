@@ -1,14 +1,6 @@
-<%= @recipe.each_slice(3) do |recipes| %>
-<div>
-  <% recipes.each do |recipe| %>
-    <div>
-      <div>
-        <img src=<%= recipe.picture.url %>/>
-        <div>
-          <h2><%= link_to recipe.title, recipe %></h2>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
+<% @recipe.each do |recipe| %>
+  <div class="recipe__card">
+    <img src=<%= recipe.picture.url %>/>
+    <h2><%= link_to recipe.title, recipe %></h2>
+  </div>
 <% end %>
