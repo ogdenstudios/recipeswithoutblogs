@@ -90,7 +90,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   # Devise config 
-  config.action_mailer.default_url_options = { :host => 'recipeswithoutblogs.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'localhost' }
 
   # Devise Mailer Setup 
   config.action_mailer.delivery_method = :smtp
