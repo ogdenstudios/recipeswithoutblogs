@@ -99,7 +99,7 @@ Rails.application.configure do
     domain: "gmail.com",
     port: 587,
     user_name: "recipeswithoutblogs@ogdenstudios.xyz",
-    password: "8NAR4h&y",
+    password: "EbGkWHDtE3zPQeU2Zf4t6DB5VwytbtTpQWiU4T",
     authentication: 'plain',
     enable_starttls_auto: true
   }
