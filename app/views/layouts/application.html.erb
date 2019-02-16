@@ -17,7 +17,8 @@
   </head>
   <body>
     <nav>
-      <a href="<%= root_path %>">RWB</a>
+      <%= link_to "Home", root_path, class: "nav-link" %>
+      <%= link_to "About", about_path %>
       <% if user_signed_in? %>
         <%= link_to "New Recipe", new_recipe_path, class: "nav-link" %>
         <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
@@ -36,7 +37,7 @@
     </div>
     <footer>
       <div>
-        <span>You can report problems or suggest improvements on the <a href="https://github.com/ogdenstudios/recipeswithoutblogs/issues" target="_blank" rel="noopener">GitHub issues page</a> for this project, or email <a href="mailto:tylerwilliamsct@gmail.com">Tyler</a> about it if that's easier.</span>
+        <span>You can report problems or suggest improvements on the <a href="https://github.com/ogdenstudios/recipeswithoutblogs/issues" target="_blank" rel="noopener">GitHub issues page</a> for this project, or email <a href="mailto:tyler@ogdenstudios.xyz">Tyler</a> about it if that's easier.</span>
       </div>
     </footer>
   </body>
