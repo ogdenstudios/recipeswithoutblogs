@@ -8,7 +8,7 @@ local:
 
 amazon:
   service: S3
-  access_key_id: "AKIAJ7ATAVEGNMHDIEWQ" 
-  secret_access_key: "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"
-  region: us-west-1
+  access_key_id: ENV["AWS_ACCESS_KEY"]
+  secret_access_key: ENV["AWS_SECRET_KEY"]
+  region: us-west-2
   bucket: recipes-without-blogs

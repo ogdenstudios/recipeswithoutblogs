@@ -24,3 +24,5 @@
 
 # Keep seed emails secret
 #db/data/users.rb
+# Ignore application configuration
+/config/application.yml

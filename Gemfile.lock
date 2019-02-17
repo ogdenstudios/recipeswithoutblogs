@@ -688,6 +688,8 @@ GEM
     excon (0.62.0)
     execjs (2.7.0)
     ffi (1.9.25)
+    figaro (1.1.1)
+      thor (~> 0.14)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
     fog (1.42.0)
@@ -1012,6 +1014,7 @@ DEPENDENCIES
   cocoon (~> 1.2, >= 1.2.9)
   coffee-rails (~> 4.2)
   devise
+  figaro
   fog (= 1.42)
   haml (= 5.0.0.beta.2)
   jbuilder (~> 2.5)
