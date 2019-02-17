@@ -92,9 +92,6 @@ Rails.application.configure do
   # Devise config 
   config.action_mailer.default_url_options = { :host => 'recipeswithoutblogs.herokuapp.com' }
 
-  # ActiveStorage config for heroku 
-  config.active_storage.service = :amazon
-
   # Devise Mailer Setup 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -107,4 +104,6 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
+  # ActiveStorage config for heroku 
+  config.active_storage.service = :amazon
 end
