@@ -1,0 +1,7 @@
+<h1>Recipes you have submitted</h1>
+<ul>
+    <% @recipes.each do |recipe| %>
+    <li><%= link_to recipe.title, recipe %></li>
+    <% end %>
+</ul>
+

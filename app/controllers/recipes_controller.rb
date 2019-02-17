@@ -34,10 +34,19 @@ class RecipesController < ApplicationController
     end
   end
 
-    def destroy
-      @recipe.destroy
-      redirect_to root_path, notice: "Successfully deleted recipe"
-    end
+  def destroy
+    @recipe.destroy
+    redirect_to root_path, notice: "Successfully deleted recipe"
+  end
+
+  def mine
+    @recipes = Recipe.where(user_id: current_user.id).order("created_at DESC")
+  end
+
+  def meal 
+    @recipes = Recipe.where(meal_category: params[:slug])
+    @meal = params[:slug]
+  end
 
   private
 
@@ -46,7 +55,7 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:title, :description, :picture, ingredients_attributes: [:id, :name, :_destroy], directions_attributes: [:id, :step, :_destroy])
+    params.require(:recipe).permit(:title, :description, :picture, :slug, ingredients_attributes: [:id, :name, :_destroy], directions_attributes: [:id, :step, :_destroy])
   end
 
   def correct_user
