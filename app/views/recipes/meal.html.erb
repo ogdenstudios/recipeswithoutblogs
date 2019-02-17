@@ -7,7 +7,7 @@
 <h1><%= @meal.titlecase %></h1>
 <% @recipes.each do |recipe| %>
   <div class="recipe__card">
-    <img src=<%= recipe.picture.url %>/>
+    <%= image_tag recipe.picture.url %>
     <h2><%= link_to recipe.title, recipe %></h2>
     <hr />
   </div>

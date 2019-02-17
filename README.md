@@ -1,24 +1,6 @@
-# README
+# TODO: 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Clean up sensitive API keys and credentials 
+Make everything very very semantic 
+Make more deliberate style choices: font family, font size, line heights, form styling 
+Write a real README 
