@@ -12,6 +12,14 @@
       gtag('config', 'UA-133603965-3');
     </script>
     <title>Recipes Without Blogs</title>
+    <!-- OG Tags -->
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Recipes Without Blogs" />
+    <meta property="og:description" content="<%= @description ? @description : "Just recipes. No backstories. Guaranteed."%>" />
+    <meta property="og:image" content="<%= @image_url ? @image_url : "" %>" />
+    <meta property="og:locale" content="en_US" />
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
