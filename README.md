@@ -1,6 +1,5 @@
 # TODO: 
 
-Clean up sensitive API keys and credentials 
 Pull back into master correctly
 DNS config 
 Force SSL

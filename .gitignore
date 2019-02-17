@@ -23,6 +23,6 @@
 .byebug_history
 
 # Keep seed emails secret
-#db/data/users.rb
+/db/data/users.rb
 # Ignore application configuration
 /config/application.yml
