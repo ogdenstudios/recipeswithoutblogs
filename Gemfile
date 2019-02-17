@@ -50,6 +50,18 @@ gem 'mini_magick', '~> 4.8'
 
 gem 'seed_migration' 
 
+# Fix Nokogiri vulnerability
+
+gem "nokogiri", ">= 1.8.5"
+
+# Fix Rack vulnerability 
+
+gem "rack", ">= 2.0.6"
+
+# Fix Loofah vulnerability 
+
+gem "loofah", ">= 2.2.3"
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
