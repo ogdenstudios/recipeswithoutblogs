@@ -6,12 +6,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   process resize_to_limit: [400, 400]
 
   # Choose what kind of storage to use for this uploader:
-  storage = :fog
-  fog_credentials = {
-    :provider               => 'AWS',                            # required
-    :aws_access_key_id      => "AKIAJ7ATAVEGNMHDIEWQ",         # required
-    :aws_secret_access_key  => "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",     # required
-  }
+  storage = :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
