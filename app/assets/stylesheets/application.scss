@@ -14,7 +14,6 @@
  *= require_self
  */
 
-$gray: #F6F6F6;
 body {
     margin: 0 auto;
     max-width: 600px;
@@ -31,9 +30,14 @@ footer {
 
 .recipe {
     &__card {
-        background: $gray;
-        box-sizing: content-box;
-        margin: 1rem;
-        padding: 1rem;
+        margin: 1rem 0;
+        img {
+            height: 400px;
+            width: 400px;
+            @media all and (max-width: 500px) {
+                height: 300px;
+                width: 300px;
+            }
+        }
     }
 }
