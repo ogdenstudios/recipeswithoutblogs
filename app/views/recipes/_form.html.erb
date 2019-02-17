@@ -11,9 +11,19 @@
 	<% end %>
 
 	<div>
-		<%= f.input :title %>
+		<label for="recipe[title]">Title</label>
+		<%= f.input :title, label: false %>
 		<label for="recipe[description]">* Description: 280 character limit</label>
 		<%= f.input :description, label: false %>
+		<label for="recipe[meal_category]">Meal category</label><br />
+		<select name="recipe[meal_category]" required="true">
+			<option>breakfast</option>
+			<option>lunch</option>
+			<option>dinner</option>
+			<option>dessert</option>
+			<option>other</option>
+		</select>
+		<br />
 		<label for="recipe[picture]">Picture: as high resolution as possible, square if you can. Will be cropped to 400x400</label>
 		<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
 		<div>
