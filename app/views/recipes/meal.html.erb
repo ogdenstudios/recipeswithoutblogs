@@ -5,7 +5,7 @@
 <%= link_to "Other", recipes_meal_path(slug: "other") %>
 
 <h1><%= @meal.titlecase %></h1>
-<% @recipe.each do |recipe| %>
+<% @recipes.each do |recipe| %>
   <div class="recipe__card">
     <img src=<%= recipe.picture.url %>/>
     <h2><%= link_to recipe.title, recipe %></h2>
