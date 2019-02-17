@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
     :provider               => 'AWS',                             # required
     :aws_access_key_id      => "AKIAJ7ATAVEGNMHDIEWQ",         # required
     :aws_secret_access_key  => "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",     # required
-    :region                 => 'us-west-1'                        # optional, defaults to 'us-east-1'
+    :region                 => 'us-west-2'                        # optional, defaults to 'us-east-1'
   }
   config.fog_directory  = 'recipes-without-blogs'               # required
   #config.fog_host       = 'https://assets.example.com'           # optional, defaults to nil
