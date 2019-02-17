@@ -5,9 +5,11 @@
 <%= link_to "Other", recipes_meal_path(slug: "other") %>
 
 <h1><%= @meal.titlecase %></h1>
-<ul>
-    <% @recipes.each do |recipe| %>
-    <li><%= link_to recipe.title, recipe %></li>
-    <% end %>
-</ul>
+<% @recipe.each do |recipe| %>
+  <div class="recipe__card">
+    <img src=<%= recipe.picture.url %>/>
+    <h2><%= link_to recipe.title, recipe %></h2>
+    <hr />
+  </div>
+<% end %>
 
