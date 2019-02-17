@@ -62,8 +62,7 @@ gem "rack", ">= 2.0.6"
 
 gem "loofah", ">= 2.2.3"
 
-# ActiveRecord config for heroku 
-gem "aws-sdk-s3", require: false
+
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
@@ -89,6 +88,8 @@ end
 group :production do
   gem 'pg',  '0.20.0'
   gem 'fog', '1.42'
+  # ActiveRecord config for heroku 
+  gem "aws-sdk-s3"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
