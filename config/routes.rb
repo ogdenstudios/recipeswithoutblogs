@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get "/about", to: "pages#about"
   get "/recipes/mine", to: "recipes#mine"
+  get "/recipes/meal", to: "recipes#meal"
   resources :recipes
 
 end
