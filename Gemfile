@@ -62,6 +62,9 @@ gem "rack", ">= 2.0.6"
 
 gem "loofah", ">= 2.2.3"
 
+# ActiveRecord config for heroku 
+gem "aws-sdk-s3", require: false
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
