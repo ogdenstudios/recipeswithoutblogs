@@ -17,7 +17,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Recipes Without Blogs" />
     <meta property="og:description" content="<%= @description ? @description : "Just recipes. No backstories. Guaranteed."%>" />
-    <meta property="og:image" content="<%= @image_url ? @image_url : "" %>" />
+    <meta property="og:image" content="<%= @image_url ? @image_url : "https://s3-us-west-2.amazonaws.com/recipes-without-blogs/rwb-logo.png" %>" />
     <meta property="og:locale" content="en_US" />
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
