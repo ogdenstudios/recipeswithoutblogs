@@ -8,6 +8,8 @@ class RecipesController < ApplicationController
 
   def show
     @current_user = current_user
+    @description = @recipe.description
+    @image_url = @recipe.picture.url
   end
 
   def new
