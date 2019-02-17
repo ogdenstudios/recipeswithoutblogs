@@ -40,7 +40,7 @@ class RecipesController < ApplicationController
   end
 
   def mine
-    @recipes = Recipe.where(user_id: current_user.id)
+    @recipes = Recipe.where(user_id: current_user.id).order("created_at DESC")
   end
 
   private
