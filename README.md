@@ -1,5 +1,4 @@
 # TODO: 
-Add password advice to password views
 Make everything very very semantic 
 Force SSL
 Make more deliberate style choices: font family, font size, line heights, form styling 
