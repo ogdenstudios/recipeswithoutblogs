@@ -25,26 +25,15 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <nav>
-      <%= link_to "Home", root_path, class: "nav-link" %>
-      <%= link_to "About", about_path %>
-      <% if user_signed_in? %>
-        <%= link_to "New Recipe", new_recipe_path, class: "nav-link" %>
-        <%= link_to "Your Recipes", recipes_mine_path, class: "nav-link" %>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-      <% else %>
-        <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
-        <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
-      <% end %>
-    </nav>
-    <div class="page-content">
+    <%= render "layouts/partials/nav" %>
+    <main class="page-content">
       <% flash.each do |name, msg| %>
-        <div>
+        <aside>
           <%= msg %>
-        </div>
+        </aside>
       <% end %>
       <%= yield %>
-    </div>
+    </main>
     <footer>
       <p>Report problems or make suggestions <a href="https://github.com/ogdenstudios/recipeswithoutblogs/issues">on GitHub</a> or <a href="mailto:tyler@ogdenstudios.xyz">via email</a>.</p>
     </footer>

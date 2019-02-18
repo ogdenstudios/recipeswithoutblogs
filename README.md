@@ -13,7 +13,7 @@ Built and maintained by [Ogden Studios](https://ogdenstudios.xyz)
 The following is a list of items I'd like to accomplish in the project. If you're looking to contribute, this is a great place to start. It's ordered from highest priority to lowest priority. 
 
 1. Accessibility checks 
-2. Thoroughly check HTML semantics and make improvements where available 
+2. Thoroughly check HTML semantics and make improvements where possible 
 3. Force SSL connections (once DNS config settles)
 4. DRY out the repetitive views 
 5. Migrate to Rails 6 
