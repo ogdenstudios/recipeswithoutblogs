@@ -13,12 +13,10 @@ Built and maintained by [Ogden Studios](https://ogdenstudios.xyz)
 The following is a list of items I'd like to accomplish in the project. If you're looking to contribute, this is a great place to start. It's ordered from highest priority to lowest priority. 
 
 1. Accessibility checks 
-2. Thoroughly check HTML semantics and make improvements where possible 
-3. Force SSL connections (once DNS config settles)
-4. DRY out the repetitive views 
-5. Migrate to Rails 6 
-6. Migrate to libsass (or off SASS in general)
-7. Move secrets files to [encrypted credentials](https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2) from Figaro
-8. Write tests 
-9. Add search functions (by category, name, ingredients, etc.)
-10. Add pagination (not using the pagination gem - let's roll our own)
+2. Force SSL connections (once DNS config settles)
+3. Migrate to Rails 6 
+4. Migrate to libsass (or off SASS in general)
+5. Move secrets files to [encrypted credentials](https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2) from Figaro
+6. Write tests 
+7. Add search functions (by category, name, ingredients, etc.)
+8. Add pagination (not using the pagination gem - let's roll our own)

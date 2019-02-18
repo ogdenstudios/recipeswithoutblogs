@@ -1,15 +1,7 @@
+<nav>
 <%= link_to "All", recipes_path %>
 <%= link_to "Breakfast", recipes_meal_path(slug: "breakfast") %>
 <%= link_to "Lunch", recipes_meal_path(slug: "lunch") %>
 <%= link_to "Dinner", recipes_meal_path(slug: "dinner") %>
 <%= link_to "Other", recipes_meal_path(slug: "other") %>
-
-<h1><%= @meal.titlecase %></h1>
-<% @recipes.each do |recipe| %>
-  <div class="recipe__card">
-    <%= image_tag recipe.picture.url %>
-    <h2><%= link_to recipe.title, recipe %></h2>
-    <hr />
-  </div>
-<% end %>
-
+</nav>

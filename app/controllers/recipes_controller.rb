@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :meal]
   before_action :correct_user, only: [:edit, :update, :destroy]
   def index
-    @recipe = Recipe.order("created_at DESC")
+    @recipes = Recipe.order("created_at DESC")
   end
 
   def show
@@ -48,6 +48,7 @@ class RecipesController < ApplicationController
   def meal 
     @recipes = Recipe.where(meal_category: params[:slug])
     @meal = params[:slug]
+    render "index"
   end
 
   private
