@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "recipes#index"
 
   get "/about", to: "pages#about"
+  get "/privacy-policy", to: "pages#privacy_policy"
   get "/recipes/mine", to: "recipes#mine"
   get "/recipes/meal", to: "recipes#meal"
   resources :recipes
