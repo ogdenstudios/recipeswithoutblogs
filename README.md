@@ -1,5 +1,4 @@
 # TODO: 
-Style forms 
 Add password advice to password views
 Make everything very very semantic 
 Force SSL
