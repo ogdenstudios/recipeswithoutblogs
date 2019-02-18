@@ -15,7 +15,7 @@ The following is a list of items I'd like to accomplish in the project. If you'r
 - Accessibility checks 
 - Add character count to description input
 - Migrate to Rails 6 
-- Migrate to libsass (or off SASS in general)
+- Migrate to sassc (or off SASS in general)
 - Move secrets files to [encrypted credentials](https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2) from Figaro
 - Write tests 
 - Add search functions (by category, name, ingredients, etc.)
