@@ -1,0 +1,23 @@
+/** Form Styles **/
+input[type=email],
+input[type=file],
+input[type=password],
+input[type=text],
+select,
+textarea    
+ {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=file] 
+{
+    padding-left: 0;
+}
+
+input[type=submit] {
+    margin: 1rem 0;
+    padding: 1rem;
+}

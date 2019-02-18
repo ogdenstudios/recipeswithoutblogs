@@ -1,0 +1,13 @@
+.recipe {
+    &__card {
+        margin: 1rem 0;
+        img {
+            height: 400px;
+            width: 400px;
+            @media all and (max-width: 500px) {
+                height: 300px;
+                width: 300px;
+            }
+        }
+    }
+}
