@@ -28,7 +28,7 @@
         <div id="directions">
           <h2>Directions</h2>
           <ol>
-            <% @recipe.directions.each do |direction| %>
+            <% @recipe.directions.order(:order).each do |direction| %>
               <li><%= direction.step %></li>
             <% end %>
           </ol>
