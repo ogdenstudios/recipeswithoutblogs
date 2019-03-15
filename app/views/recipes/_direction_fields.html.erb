@@ -1,5 +1,5 @@
 <div class="direction-container nested-fields" draggable="true" ondragstart="dragstart(event)" ondragover="dragover(event)" ondragenter="dragenter(event)" ondrop="drop(event)">
   <%= f.hidden_field :order, value: f.object.order, label: false, class: "hidden-order-field" %>
-  <%= f.input :step, label: false %>
-  <%= link_to_remove_association "Remove Step", f %>
+  <%= f.input :step, label: false, class: "direction-textarea" %>
+  <%= link_to_remove_association "Delete", f %>
 </div>

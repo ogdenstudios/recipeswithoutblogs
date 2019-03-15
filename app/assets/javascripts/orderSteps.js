@@ -1,5 +1,6 @@
 function dragstart(e) {
     source = e.target;
+    directionValue = e.target.children[1].children[0].value;
     e.dataTransfer.setData("text/plain", e.target.innerHTML);
 }
 function dragover(e) {
@@ -15,7 +16,9 @@ function drop(e) {
     e.stopPropagation();
     if (e.target.classList.contains("direction-container")) {
         source.innerHTML = e.target.innerHTML;
+        source.children[1].children[0].value = e.target.children[1].children[0].value
         e.target.innerHTML = e.dataTransfer.getData("text");
+        e.target.children[1].children[0].value = directionValue
         updateOrders();
     }
 }
