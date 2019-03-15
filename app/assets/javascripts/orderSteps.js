@@ -8,25 +8,27 @@ document.addEventListener("DOMContentLoaded", function () {
             directionContainers[i].addEventListener("dragenter", dragenter);
             directionContainers[i].addEventListener("drop", drop);
         }
-        function dragstart(e) {
-            // e.preventDefault();
-            source = e.target;
-            e.dataTransfer.setData("text/plain", e.target.innerHTML);
-        }
-        function dragover(e) {
-            e.preventDefault();
-        }
-        
-        function dragenter(e) {
-            e.preventDefault();
-        }
-        
-        function drop(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            source.innerHTML = e.target.innerHTML;
-            e.target.innerHTML = e.dataTransfer.getData("text");
-        }
     }
 });
 
+
+function dragstart(e) {
+    source = e.target;
+    e.dataTransfer.setData("text/plain", e.target.innerHTML);
+}
+function dragover(e) {
+    e.preventDefault();
+}
+
+function dragenter(e) {
+    e.preventDefault();
+}
+
+function drop(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.target.classList.contains("direction-container")) {
+        source.innerHTML = e.target.innerHTML;
+        e.target.innerHTML = e.dataTransfer.getData("text");
+    }
+}
