@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190217010647) do
+ActiveRecord::Schema.define(version: 20190315154353) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20190217010647) do
     t.integer "recipe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "order"
     t.index ["recipe_id"], name: "index_directions_on_recipe_id"
   end
 
