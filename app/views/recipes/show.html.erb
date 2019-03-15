@@ -27,11 +27,11 @@
       <div>
         <div id="directions">
           <h2>Directions</h2>
-          <ul>
+          <ol>
             <% @recipe.directions.each do |direction| %>
               <li><%= direction.step %></li>
             <% end %>
-          </ul>
+          </ol>
         </div>
       </div>
     </div>
