@@ -13,5 +13,13 @@
 }
 
 .direction-container {
-    margin-bottom: 2em;
+    padding-bottom: 2em;
+    position: relative;
+    &:before {
+        content: '\2630';
+        font-size: 28px;
+        position: absolute;
+        left: -35px;
+        top: 25px;
+    }
 }

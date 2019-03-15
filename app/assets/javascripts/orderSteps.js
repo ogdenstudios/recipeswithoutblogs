@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     if (document.getElementsByClassName("edit_recipe").length > 0) {
-        orderInputs = document.getElementsByName("order");
         directionContainers = document.getElementsByClassName("direction-container");
         for (var i = 0;i < directionContainers.length;i++) {
             directionContainers[i].addEventListener("dragstart", dragstart);
@@ -30,5 +29,13 @@ function drop(e) {
     if (e.target.classList.contains("direction-container")) {
         source.innerHTML = e.target.innerHTML;
         e.target.innerHTML = e.dataTransfer.getData("text");
+        updateOrders();
+    }
+}
+
+function updateOrders() {
+    orderInputs = document.getElementsByClassName("hidden-order-field");
+    for (var i = 0;i < orderInputs.length;i++) {
+        orderInputs[i].value = i + 1;
     }
 }
