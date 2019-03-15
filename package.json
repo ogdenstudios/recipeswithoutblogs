@@ -1,5 +1,7 @@
 {
   "name": "recipe_box",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "pa11y-ci": "^2.1.1"
+  }
 }

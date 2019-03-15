@@ -1,0 +1,17 @@
+{
+    "urls": [
+        "localhost:3000",
+        "localhost:3000/about",
+        "localhost:3000/privacy-policy",
+        "localhost:3000/users/sign_up",
+        "localhost:3000/users/sign_in",
+        "localhost:3000/recipes/mine",
+        "localhost:3000/recipes/new",
+        "localhost:3000/recipes/1",
+        "localhost:3000/recipes/1/edit",
+        "localhost:3000/recipes/meal?slug=breakfast",      
+        "localhost:3000/recipes/meal?slug=lunch",
+        "localhost:3000/recipes/meal?slug=dinner",
+        "localhost:3000/recipes/meal?slug=other"
+    ]
+}
