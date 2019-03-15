@@ -1,0 +1,180 @@
+/* line 1, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_base.scss */
+body {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+/* line 7, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_base.scss */
+.page-content {
+  padding: 1rem;
+}
+/* line 1, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_footer.scss */
+footer {
+  margin: 1rem 0;
+}
+/** Form Styles **/
+/* line 3, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_forms.scss */
+input[type=email],
+input[type=file],
+input[type=password],
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/* line 16, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_forms.scss */
+input[type=file] {
+  padding-left: 0;
+}
+
+/* line 21, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_forms.scss */
+input[type=submit] {
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+/* line 26, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_forms.scss */
+.nested-fields {
+  position: relative;
+}
+
+/* line 29, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_forms.scss */
+.remove_fields {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+}
+/* line 2, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_recipe.scss */
+.recipe__card {
+  margin: 1rem 0;
+}
+/* line 4, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_recipe.scss */
+.recipe__card img {
+  height: 400px;
+  width: 400px;
+}
+@media all and (max-width: 500px) {
+  /* line 4, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_recipe.scss */
+  .recipe__card img {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+/* line 15, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_recipe.scss */
+.direction-container {
+  padding-bottom: 2em;
+  position: relative;
+}
+/* line 18, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_recipe.scss */
+.direction-container:before {
+  content: '\2630';
+  font-size: 28px;
+  position: absolute;
+  left: -35px;
+  top: 25px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/** Form Styles **/
+/* line 2, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_forms.scss */
+input[type=email],
+input[type=file],
+input[type=password],
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/* line 15, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_forms.scss */
+input[type=file] {
+  padding-left: 0;
+}
+
+/* line 20, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_forms.scss */
+input[type=submit] {
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+/* line 25, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_forms.scss */
+.nested-fields {
+  position: relative;
+}
+
+/* line 28, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_forms.scss */
+.remove_fields {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+}
+
+/* line 1, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_footer.scss */
+footer {
+  margin: 1rem 0;
+}
+
+/* line 1, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_base.scss */
+body {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+/* line 7, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_base.scss */
+.page-content {
+  padding: 1rem;
+}
+
+/* line 2, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_recipe.scss */
+.recipe__card {
+  margin: 1rem 0;
+}
+/* line 4, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_recipe.scss */
+.recipe__card img {
+  height: 400px;
+  width: 400px;
+}
+@media all and (max-width: 500px) {
+  /* line 4, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_recipe.scss */
+  .recipe__card img {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+/* line 15, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_recipe.scss */
+.direction-container {
+  padding-bottom: 2em;
+  position: relative;
+}
+/* line 18, /Users/tylerwilliams/dev/recipeswithoutblogs/app/assets/stylesheets/_recipe.scss */
+.direction-container:before {
+  content: '\2630';
+  font-size: 28px;
+  position: absolute;
+  left: -35px;
+  top: 25px;
+}
