@@ -74,6 +74,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   # Use Rspec for testing
   gem 'rspec-rails', '~> 3.8'
+  # Use factory bot for testing
+  gem 'factory_bot_rails'
 end
 
 group :development do
