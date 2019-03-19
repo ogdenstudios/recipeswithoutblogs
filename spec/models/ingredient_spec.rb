@@ -3,7 +3,12 @@ require 'rails_helper'
 RSpec.describe Ingredient, :type => :model do 
 
     it "is valid with valid attributes" do 
-        ingrdient = Ingredient.new(name: "Salt", )
-        expect(recipe).to be_valid 
+        ingredient = Ingredient.new(name: "Salt", recipe_id: 1)
+        expect(ingredient).to be_valid 
+    end
+
+    it "is not valid without a name" do 
+        ingredient = Ingredient.new(name: nil, recipe_id: 1)
+        expect(ingredient).to be_valid 
     end
 end
