@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function() {
+    if (document.getElementById("recipe-submit")) {
+    document.getElementById("recipe-submit").addEventListener("click", updateOrders);
+    }
+});
+
 function dragstart(e) {
     source = e.target;
     directionValue = e.target.children[1].children[0].value;
