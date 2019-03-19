@@ -4,6 +4,6 @@ class PagesController < ApplicationController
     end
 
     def privacy_policy 
-        @description = "Recipes Without Blogs - Prviacy policy"
+        @description = "Recipes Without Blogs - Privacy policy"
     end
 end
