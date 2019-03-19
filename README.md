@@ -2,9 +2,9 @@
 
 A recipe website without the annoying backstories. 
 
-Designed and implemented using [Brutal Web Design](https://brutalist-web.design)
+Designed and implemented using [Brutal Web Design](https://brutalist-web.design).
 
-Built and maintained by [Ogden Studios](https://ogdenstudios.xyz)
+Built and maintained by [Ogden Studios](https://ogdenstudios.xyz).
 
 [Support this project by buying me a coffee](https://ko-fi.com/ogdenstudios).
 
