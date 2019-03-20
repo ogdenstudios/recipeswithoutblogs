@@ -6,7 +6,7 @@ RSpec.describe PagesController, :type => :controller do
       get :about
       expect(response.status).to eq(200)
     end
-    it "responds to html by default" do 
+    it "responds with html by default" do 
       get :about
       expect(response.content_type).to eq "text/html"
     end
@@ -16,7 +16,7 @@ RSpec.describe PagesController, :type => :controller do
       get :privacy_policy
       expect(response.status).to eq(200)
     end
-    it "responds to html by default" do 
+    it "responds with html by default" do 
       get :privacy_policy
       expect(response.content_type).to eq "text/html"
     end
