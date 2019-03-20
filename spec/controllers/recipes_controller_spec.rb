@@ -60,4 +60,14 @@ RSpec.describe RecipesController, :type => :controller do
             expect(response).to render_template("new")
         end
     end
+    describe "POST create" do 
+        it "responds with a 302 status code if not logged in" do 
+            post :create 
+            expect(response.status).to eq(302)
+        end
+        it "redirects to the sign in page if not logged in" do
+            post :create 
+            expect(response).to redirect_to('/users/sign_in')
+        end
+    end
 end
