@@ -12,5 +12,9 @@ FactoryBot.define do
         picture { Rack::Test::UploadedFile.new(Rails.root.join('app/assets/images/vegan-chocolate-cinnamon-babka.jpg'), 'image/jpeg') }
         meal_category {"breakfast"}
     end
-  
+
+    factory :ingredient do 
+        association :recipe, factory: :recipe
+        name { "salt" }
+    end
   end
