@@ -40,5 +40,15 @@ RSpec.feature 'Recipe management', :type => :feature do
         visit "/recipes/#{recipe.id}/edit"
         expect(current_path).to eq "/recipes/#{recipe.id}/edit"
     end
-    scenario 'they can delete their recipes'
+    scenario 'they can delete their recipes', :js => true do
+        user = create(:user)
+        recipe = create(:recipe, user_id: user.id)
+        login_as(user)
+        visit "/recipes/mine"
+        click_on(recipe.title)
+        accept_alert do 
+            click_on("Delete")
+        end
+        expect(Recipe.find(recipe.id)).to eq nil
+    end
 end
