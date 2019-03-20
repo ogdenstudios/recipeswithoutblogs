@@ -33,4 +33,10 @@ RSpec.feature 'Recipe browsing', :type => :feature do
             expect(page).to have_content 'Other'
         end
     end
+
+    scenario 'they can click a link and view a recipe' do
+        visit recipes_path 
+        click_link("link-to-recipe-1")
+        expect(current_path).to eq '/recipes/1'
+    end
 end
