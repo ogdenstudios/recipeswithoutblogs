@@ -17,4 +17,10 @@ FactoryBot.define do
         association :recipe, factory: :recipe
         name { "salt" }
     end
+
+    factory :direction do 
+        association :recipe, factory: :recipe
+        step { "do something" }
+        order { 1 }
+    end
   end
