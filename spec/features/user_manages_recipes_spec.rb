@@ -23,9 +23,22 @@ RSpec.feature 'Recipe management', :type => :feature do
         visit recipes_mine_path 
         expect(current_path).to eq '/recipes/mine'
     end
-    scenario 'they cannot update a recipe without being signed in'
-    scenario "they cannot update another user's recipes"
-    scenario 'they can update their recipes'
-    scenario "they cannot delete another user's recipes"
+    scenario 'they cannot update a recipe without being signed in' do 
+        visit '/recipes/1/edit'
+        expect(current_path).to eq '/users/sign_in'
+    end
+    scenario "they cannot update another user's recipes" do 
+        user = create(:user) 
+        login_as(user)
+        visit '/recipes/1/edit'
+        expect(current_path).to eq '/'
+    end
+    scenario 'they can update their recipes' do 
+        user = create(:user)
+        recipe = create(:recipe, user_id: user.id)
+        login_as(user)
+        visit "/recipes/#{recipe.id}/edit"
+        expect(current_path).to eq "/recipes/#{recipe.id}/edit"
+    end
     scenario 'they can delete their recipes'
 end
