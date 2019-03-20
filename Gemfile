@@ -76,6 +76,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   # Use factory bot for testing
   gem 'factory_bot_rails'
+  # Add rails-controller-testing for assert_render
+  gem 'rails-controller-testing'
 end
 
 group :development do
