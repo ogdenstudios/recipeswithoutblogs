@@ -39,7 +39,7 @@ gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
 gem 'jquery-rails'
 
-gem 'devise'
+gem "devise", ">= 4.6.0"
 
 gem 'activestorage', '~> 0.1'
 
