@@ -17,8 +17,5 @@ module RecipeBox
 
     # Change this for Rails 6 compatability with Heroku - ActionMailer was crashing heroku when this was set to false (which it was by default)
     config.action_controller.default_protect_from_forgery = true
-
-    # Force SSL 
-    config.force_ssl = true
   end
 end
