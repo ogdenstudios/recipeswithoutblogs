@@ -59,9 +59,6 @@ gem "rack", ">= 2.0.6"
 
 gem "loofah", ">= 2.2.3"
 
-# Figaro for config variables (until we update to Rails 6 and use master.key)
-gem "figaro"
-
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.8'
