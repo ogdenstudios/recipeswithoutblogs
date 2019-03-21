@@ -13,7 +13,7 @@
 	<div>
 		<label for="recipe[title]">* Title</label>
 		<%= f.input :title, label: false %>
-		<label for="recipe[description]">* Description: 280 character limit</label>
+		<label for="recipe[description]">* Description: 280 character limit </label><span id="charactersLeft">(0/280)</span>
 		<%= f.input :description, label: false %>
 		<label for="recipe[meal_category]">* Meal category</label><br />
 		<select name="recipe[meal_category]" required="true">
