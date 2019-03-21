@@ -1,0 +1,28 @@
+.recipe__card {
+    margin: 1rem 0;
+}
+
+.recipe__card img {
+    height: 400px;
+    width: 400px;
+}
+
+@media all and (max-width: 500px) {
+    .recipe__card img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.direction-container {
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.direction-container:before {
+    content: '\2630';
+    font-size: 28px;
+    position: absolute;
+    left: -35px;
+    top: 25px;
+}
