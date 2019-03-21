@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2.2'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -31,9 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'haml', '5.0.0.beta.2'
-
-gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'simple_form'
 
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
@@ -41,7 +39,7 @@ gem 'jquery-rails'
 
 gem "devise", ">= 4.6.0"
 
-gem 'activestorage', '~> 0.1'
+gem 'activestorage'
 
 gem 'carrierwave', '1.2.2'
 
@@ -66,14 +64,14 @@ gem "figaro"
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.8'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   # Use Rspec for testing
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails'
   # Use factory bot for testing
   gem 'factory_bot_rails'
   # Add rails-controller-testing for assert_render
