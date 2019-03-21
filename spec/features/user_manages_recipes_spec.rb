@@ -13,6 +13,19 @@ RSpec.feature 'Recipe management', :type => :feature do
         visit new_recipe_path
         expect(current_path).to eq '/recipes/new'
     end
+    scenario 'they an create a new recipe when signed in' do 
+        user = create(:user)
+        visit new_user_session_path 
+        fill_in('user_email', :with => user.email)
+        fill_in('user_password', :with => user.password)
+        click_button('Log in')
+        visit new_recipe_path
+        fill_in('recipe_title', :with => 'uniquerecipetitleforsure')
+        fill_in('recipe_description', :with => 'a description')
+        attach_file('recipe_picture', Rails.root + 'app/assets/images/vegan-chocolate-cinnamon-babka.jpg')
+        click_button('Create Recipe') 
+        expect(Recipe.where(title: 'uniquerecipetitleforsure')).to exist
+    end
     scenario 'they cannot view their recipes without being signed in' do 
         visit recipes_mine_path 
         expect(current_path).to eq '/users/sign_in'
