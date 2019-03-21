@@ -70,4 +70,8 @@ RSpec.describe RecipesController, :type => :controller do
             expect(response).to redirect_to('/users/sign_in')
         end
     end
+    describe "DESTROY recipe" do 
+        it "requires a user to be logged in to delete recipes"
+        it "won't allow a user to delete another user's recipes"
+    end
 end
