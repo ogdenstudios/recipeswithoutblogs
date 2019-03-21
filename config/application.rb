@@ -14,6 +14,8 @@ module RecipeBox
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # Change this for Rails 6 compatability with Heroku - ActionMailer was crashing heroku when this was set to false (which it was by default)
     config.action_controller.default_protect_from_forgery = true
   end
 end
