@@ -71,7 +71,29 @@ RSpec.describe RecipesController, :type => :controller do
         end
     end
     describe "DESTROY recipe" do 
-        it "requires a user to be logged in to delete recipes"
-        it "won't allow a user to delete another user's recipes"
+        it "requires a user to be logged in to delete recipes" do 
+            recipe = create(:recipe)
+            delete :destroy, params: { :id => recipe.id }
+            expect(Recipe.where(id: recipe.id)).to exist
+        end
+        it "won't allow a user to delete another user's recipes" do 
+            user1 = create(:user)
+            user2 = create(:user) 
+            allow(request.env['warden']).to receive(:authenticate!).and_return(user2)
+            allow(controller).to receive(:current_user).and_return(user2)
+            recipe = create(:recipe, user_id: user1.id)
+            sign_in user2 
+            delete :destroy, params: { :id => recipe.id }
+            expect(Recipe.where(id: recipe.id)).to exist
+        end
+        it "allows a user to destroy a recipe when logged in" do
+            user = create(:user)
+            allow(request.env['warden']).to receive(:authenticate!).and_return(user)
+            allow(controller).to receive(:current_user).and_return(user)
+            recipe = create(:recipe, user_id: user.id)
+            sign_in user 
+            delete :destroy, params: { :id => recipe.id }
+            expect(Recipe.where(id: recipe.id)).to_not exist
+        end
     end
 end
