@@ -1,4 +1,5 @@
 .recipe__card {
+    clear: left;
     margin: 1rem 0;
 }
 
@@ -25,4 +26,15 @@
     position: absolute;
     left: -35px;
     top: 25px;
+}
+
+.pagination li {
+    float: left;
+    margin-right: 1em;
+}
+
+.pagination ul {
+    height: 1.5em;
+    list-style: none;
+    padding-left: 0;
 }

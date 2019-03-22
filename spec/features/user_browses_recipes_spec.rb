@@ -36,7 +36,37 @@ RSpec.feature 'Recipe browsing', :type => :feature do
 
     scenario 'they can click a link and view a recipe' do
         visit recipes_path 
-        click_link("link-to-recipe-1")
-        expect(current_path).to eq '/recipes/1'
+        click_link("link-to-recipe-#{Recipe.count}")
+        expect(current_path).to eq "/recipes/#{Recipe.count}"
+    end
+
+    scenario 'they see pagination at the top of index' do 
+        100.times {create(:recipe)}
+        visit root_path
+        expect(page).to have_css('nav.pagination') 
+    end
+    scenario 'they see pagination at the top of breakfast' do 
+        100.times {create(:recipe, meal_category: 'breakfast')}
+        visit recipes_meal_path(slug: 'breakfast') 
+        expect(page).to have_css('nav.pagination')
+    end
+    scenario 'they see pagination at the top of lunch' do 
+        100.times {create(:recipe, meal_category: 'lunch')}
+        visit recipes_meal_path(slug: 'lunch') 
+        expect(page).to have_css('nav.pagination')
+    end
+    scenario 'they see pagination at the top of dinner' do 
+        100.times {create(:recipe, meal_category: 'dinner')}
+        visit recipes_meal_path(slug: 'dinner') 
+        expect(page).to have_css('nav.pagination')
+    end
+    scenario 'they see pagination at the top of other' do 
+        100.times {create(:recipe, meal_category: 'other')}
+        visit recipes_meal_path(slug: 'other') 
+        expect(page).to have_css('nav.pagination')
+    end
+    scenario 'the pagination encompasses all recipes' do 
+        visit recipes_path(page: (Recipe.count / 10) + 1) 
+        expect(page).to have_content(Recipe.first.title)
     end
 end

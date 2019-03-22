@@ -1,5 +1,12 @@
 <%= render "recipe_nav" %>
 <h1><%= @meal ? @meal.titlecase : "Recipes" %></h1>
+<% if @page_count > 1 %>
+<%= render 'pagination_nav', meal: @meal, page_count: @page_count%>
+<% end %>
 <% @recipes.each do |recipe| %>
   <%= render "card", recipe: recipe %>
 <% end %>
+<% if @page_count > 1 %>
+<%= render 'pagination_nav', meal: @meal, page_count: @page_count%>
+<% end %>
+
