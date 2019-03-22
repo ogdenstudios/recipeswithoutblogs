@@ -36,11 +36,15 @@ RSpec.feature 'Recipe browsing', :type => :feature do
 
     scenario 'they can click a link and view a recipe' do
         visit recipes_path 
-        click_link("link-to-recipe-1")
-        expect(current_path).to eq '/recipes/1'
+        click_link("link-to-recipe-#{Recipe.count}")
+        expect(current_path).to eq "/recipes/#{Recipe.count}"
     end
 
-    scenario 'they see pagination at the top of index'
+    scenario 'they see pagination at the top of index' do 
+        100.times {create(:recipe)}
+        visit root_path
+        expect(page).to have_css('nav.pagination') 
+    end
     scenario 'they see pagination at the top of breakfast'
     scenario 'they see pagination at the top of lunch'
     scenario 'they see pagination at the top of dinner'
