@@ -3,7 +3,9 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :meal]
   before_action :correct_user, only: [:edit, :update, :destroy]
   def index
-    @recipes = Recipe.order("created_at DESC")
+    params[:page] ? page = params[:page] : page = 1
+    @recipes = Recipe.order("created_at DESC").offset((page.to_i * 10) - 10).first(10)
+    @page_count = (Recipe.count.to_i / 10) + 1
   end
 
   def show
@@ -46,7 +48,7 @@ class RecipesController < ApplicationController
   end
 
   def meal 
-    @recipes = Recipe.where(meal_category: params[:slug])
+    @recipes = Recipe.where(meal_category: params[:slug]).first(10)
     @meal = params[:slug]
     render "index"
   end
@@ -58,7 +60,7 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:title, :description, :meal_category, :picture, :slug, ingredients_attributes: [:id, :name, :_destroy], directions_attributes: [:id, :step, :order, :_destroy])
+    params.require(:recipe).permit(:title, :description, :meal_category, :picture, :slug, :page, ingredients_attributes: [:id, :name, :_destroy], directions_attributes: [:id, :step, :order, :_destroy])
   end
 
   def correct_user

@@ -39,4 +39,9 @@ RSpec.feature 'Recipe browsing', :type => :feature do
         click_link("link-to-recipe-1")
         expect(current_path).to eq '/recipes/1'
     end
+
+    scenario 'they see pagination at the top of the recipes index view' do
+        100.times { create(:recipe) }
+
+    end
 end

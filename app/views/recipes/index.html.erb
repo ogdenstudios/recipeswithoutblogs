@@ -1,5 +1,21 @@
 <%= render "recipe_nav" %>
 <h1><%= @meal ? @meal.titlecase : "Recipes" %></h1>
+<nav class="pagination">
+  Page:
+  <ul>
+    <% (1..@page_count).each do |i| %>
+      <li><%= link_to(i.to_s, recipes_path(page: i.to_s)) %></li>
+    <% end %>
+  </ul>
+</nav>
 <% @recipes.each do |recipe| %>
   <%= render "card", recipe: recipe %>
 <% end %>
+<nav class="pagination">
+  Page:
+  <ul>
+    <% (1..@page_count).each do |i| %>
+      <li><%= link_to(i.to_s, recipes_path(page: i.to_s)) %></li>
+    <% end %>
+  </ul>
+</nav>
