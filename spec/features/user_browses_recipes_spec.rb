@@ -40,8 +40,11 @@ RSpec.feature 'Recipe browsing', :type => :feature do
         expect(current_path).to eq '/recipes/1'
     end
 
-    scenario 'they see pagination at the top of the recipes index view' do
-        100.times { create(:recipe) }
+    scenario 'they see pagination at the top of index'
+    scenario 'they see pagination at the top of breakfast'
+    scenario 'they see pagination at the top of lunch'
+    scenario 'they see pagination at the top of dinner'
+    scenario 'they see pagination at the top of other'
+    scenario 'the pagination encompasses all recipes'
 
-    end
 end

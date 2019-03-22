@@ -1,0 +1,12 @@
+<nav class="pagination">
+  Page:
+  <ul>
+    <% (1..page_count).each do |i| %>
+      <% if meal %>
+        <li><%= link_to(i.to_s, recipes_meal_path(slug: meal, page: i.to_s)) %></li>
+      <% else %>
+        <li><%= link_to(i.to_s, recipes_path(page: i.to_s)) %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</nav>

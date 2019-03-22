@@ -48,8 +48,10 @@ class RecipesController < ApplicationController
   end
 
   def meal 
-    @recipes = Recipe.where(meal_category: params[:slug]).first(10)
+    params[:page] ? page = params[:page] : page = 1
+    @recipes = Recipe.order("created_at DESC").where(meal_category: params[:slug]).offset((page.to_i * 10) - 10).first(10)
     @meal = params[:slug]
+    @page_count = (Recipe.where(meal_category: params[:slug]).count.to_i / 10) + 1
     render "index"
   end
 
