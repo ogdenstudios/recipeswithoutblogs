@@ -45,10 +45,28 @@ RSpec.feature 'Recipe browsing', :type => :feature do
         visit root_path
         expect(page).to have_css('nav.pagination') 
     end
-    scenario 'they see pagination at the top of breakfast'
-    scenario 'they see pagination at the top of lunch'
-    scenario 'they see pagination at the top of dinner'
-    scenario 'they see pagination at the top of other'
-    scenario 'the pagination encompasses all recipes'
-
+    scenario 'they see pagination at the top of breakfast' do 
+        100.times {create(:recipe, meal_category: 'breakfast')}
+        visit recipes_meal_path(slug: 'breakfast') 
+        expect(page).to have_css('nav.pagination')
+    end
+    scenario 'they see pagination at the top of lunch' do 
+        100.times {create(:recipe, meal_category: 'lunch')}
+        visit recipes_meal_path(slug: 'lunch') 
+        expect(page).to have_css('nav.pagination')
+    end
+    scenario 'they see pagination at the top of dinner' do 
+        100.times {create(:recipe, meal_category: 'dinner')}
+        visit recipes_meal_path(slug: 'dinner') 
+        expect(page).to have_css('nav.pagination')
+    end
+    scenario 'they see pagination at the top of other' do 
+        100.times {create(:recipe, meal_category: 'other')}
+        visit recipes_meal_path(slug: 'other') 
+        expect(page).to have_css('nav.pagination')
+    end
+    scenario 'the pagination encompasses all recipes' do 
+        visit recipes_path(page: (Recipe.count / 10) + 1) 
+        expect(page).to have_content(Recipe.first.title)
+    end
 end

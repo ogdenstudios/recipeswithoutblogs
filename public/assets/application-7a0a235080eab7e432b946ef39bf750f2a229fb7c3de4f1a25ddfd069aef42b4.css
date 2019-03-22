@@ -1,0 +1,100 @@
+body {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 1rem;
+}
+
+.page-content {
+    padding: 1rem;
+}
+footer {
+    margin: 1rem 0;
+}
+/** Form Styles **/
+
+input[type=email],
+input[type=file],
+input[type=password],
+input[type=text],
+select,
+textarea    
+ {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=file] 
+{
+    padding-left: 0;
+}
+
+input[type=submit] {
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.nested-fields {
+    position: relative;
+}
+.remove_fields {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+}
+.recipe__card {
+    clear: left;
+    margin: 1rem 0;
+}
+
+.recipe__card img {
+    height: 400px;
+    width: 400px;
+}
+
+@media all and (max-width: 500px) {
+    .recipe__card img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.direction-container {
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.direction-container:before {
+    content: '\2630';
+    font-size: 28px;
+    position: absolute;
+    left: -35px;
+    top: 25px;
+}
+
+.pagination li {
+    float: left;
+    margin-right: 1em;
+}
+
+.pagination ul {
+    height: 1.5em;
+    list-style: none;
+    padding-left: 0;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
