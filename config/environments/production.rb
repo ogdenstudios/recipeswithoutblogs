@@ -93,11 +93,11 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'recipeswithoutblogs.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    domain: "gmail.com",
+    address: "smtp.mailgun.org",
+    domain: "mg.recipeswithoutblogs.com",
     port: 587,
-    user_name: Rails.application.credentials.gmail_username,
-    password: Rails.application.credentials.gmail_password,
+    user_name: Rails.application.credentials.mailgun_username,
+    password: Rails.application.credentials.mailgun_password,
     authentication: 'plain',
     enable_starttls_auto: true
 }
