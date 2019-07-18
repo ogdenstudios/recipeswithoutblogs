@@ -42,7 +42,7 @@ gem 'activestorage'
 
 gem 'carrierwave', '1.2.2'
 
-gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.9'
 
 gem 'seed_migration' 
 
